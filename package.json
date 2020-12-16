@@ -1,0 +1,22 @@
+{
+  "name": "gaokexin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gouson/gaokexin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gouson/gaokexin/issues"
+  },
+  "homepage": "https://github.com/Gouson/gaokexin#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0"
+  }
+}

@@ -118,7 +118,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-console.log(1);
+var music = document.querySelector('audio');
+var shinji = document.querySelector('#shinji');
+shinji.addEventListener('click', function () {
+  if (music !== null) {
+    if (music.paused) {
+      music.play(); // 播放
+
+      shinji.classList.remove('paused');
+      shinji.classList.add('play');
+    } else {
+      music.pause(); // 暂停
+
+      shinji.classList.remove('play');
+      shinji.classList.add('paused');
+    }
+  }
+});
 },{}],"C:/Users/admin/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +163,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60534" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54058" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -178,9 +194,8 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
+      } else {
+        window.location.reload();
       }
     }
 

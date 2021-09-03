@@ -19,6 +19,16 @@ const text_in = keyframes`
         width:1ch;
     }
 `
+const Wrapper = styled.div`
+    padding: 5vh 10vw;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: calc(10px + 0.33vw);
+    -webkit-font-smoothing: antialiased;
+    color: #121314;
+    overflow: hidden;
+    height: 100vh;
+
+`
 const Title = styled.h1`
     display: inline-block;
     margin: 0;
@@ -84,7 +94,7 @@ const shift = keyframes`
 const PDiv = styled.div`
     margin-top: 100vh;
     &.visiable{
-        animation:${shift} 1s forwards;
+        animation:${shift} 1s forwards ease-in;
     }
 `
 
@@ -92,13 +102,13 @@ const Home = () => {
     const text = `Hi,I am Gouson`
     const textArray = text.split('')
     const [typingEnd, setTypingEnd] = useState(false);
-    const animationend:React.AnimationEventHandler<HTMLHeadingElement> | undefined = (e) => {
+    const animationend: React.AnimationEventHandler<HTMLHeadingElement> | undefined = (e) => {
         if (e.target === document.querySelector('h1 span:last-child')) {
             setTypingEnd(true)
         }
     }
     return (
-        <div>
+        <Wrapper>
             <Title className={typingEnd ? 'ended' : ''} onAnimationEnd={animationend}>
                 {
                     textArray.map((e, i) =>
@@ -114,7 +124,7 @@ const Home = () => {
                     If it's about work, please email me <A href="mailto:gaokx36@gmail.com">gaokx36@gmail.com</A > or <A href="mailto:gouson@qq.com">gouson@qq.com</A>
                 </P>
             </PDiv>
-        </div>
+        </Wrapper>
     )
 }
 

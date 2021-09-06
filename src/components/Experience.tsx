@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React, { JSXElementConstructor,ReactElement, useState } from "react"
 import styled from "styled-components"
 import Project from "./Project"
-interface ProjectType {
+type ProjectType = {
     projectName: string;
-    content: string;
+    content: ReactElement;
 }
-interface Props {
+type Props = {
     data: {
         companyName: string;
         dateRange: string;
@@ -60,7 +60,6 @@ const TimeLine = styled.div`
     }
 `
 const Experience = (props: Props) => {
-    console.log(props)
     return (
         <Wrapper>
             <CompanyDiv>

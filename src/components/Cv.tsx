@@ -33,7 +33,7 @@ const Article = styled.article`
     padding: 1em;
 `
 const Section = styled.section`
-    padding: 20px 0;
+    padding: 10px 0;
 `
 const Line = styled.div`
     height: 2px;
@@ -44,6 +44,12 @@ const P2 = styled.p`
     font-weight: 300;
     line-height: 1.4;
     padding: 0.5em 0;
+`
+const P3 = styled.li`
+    font-size: 1em;
+    font-weight: 350;
+    line-height: 1.1;
+    padding: 0.3em 0;
 `
 const LightSpan = styled.span`
     color: #f39c12;
@@ -133,7 +139,7 @@ const Cv = () => {
             <P2>这个项目期初是因为使用Element的过程中萌生做组件库的想法，正好<LightSpan>Vue3</LightSpan>与<LightSpan>Vite</LightSpan>推出，利用这个机会，配合<LightSpan>TypeScript</LightSpan>练习一下Vue3的新特性Compnent API。</P2>
             <P2>目前做了Switch组件，Button组件，Dialog组件，Tabs组件。其他功能还在进一步开发建设中。</P2>
             <P2>Tabs组件开发过程中，遇到了component内容不更新的问题，查看了官方的issues，发现component需要配合:key改变内容。</P2>
-            <P2>页面中展示更漂亮的代码，采用了prismjs库</P2>
+            <P2>页面中展示更漂亮的代码，采用了prismjs库。</P2>
             <P2>使用了<LightSpan>bash脚本</LightSpan>自动一键打包上传更新</P2>
             <P2><A href="https://gouson.github.io/gouson-ui-1/index.html" target="_blank">预览地址</A> &nbsp;
                 <A href="https://github.com/Gouson/Vue3Wheel/tree/master/gouson-ui-1" target="_blank">源码链接</A>
@@ -143,13 +149,24 @@ const Cv = () => {
     const personP2 = {
         projectName: '彩虹记账本',
         content: <div>
-                    <P2>简单好用的脱机记账工具，为满足个人使用而独立开发的一款移动端记账应用。</P2>
-                    <P2><LightSpan>React</LightSpan> / <LightSpan>React Router</LightSpan> / <LightSpan>自定义 Hooks</LightSpan> / <LightSpan>webpack</LightSpan> / <LightSpan>TypeScript</LightSpan> / <LightSpan>LocalStorage</LightSpan> / <LightSpan>SVG Icon</LightSpan> / <LightSpan>styled-components</LightSpan></P2>
-                    <P2>该项目加深了我对 React Hooks，React函数组件，TypeScript以及SVG Icon的了解，项目收获记录在语雀中。</P2>
-                    <P2><A href="https://gouson.github.io/rainbow-bookkeeping/" target="_blank">预览地址</A> &nbsp;
-                        <A href="https://github.com/Gouson/icebookkeeping-react" target="_blank">源码链接</A>
-                    </P2>
-                </div>
+            <P2>简单好用的脱机记账工具，为满足个人使用而独立开发的一款移动端记账应用。</P2>
+            <P2><LightSpan>React</LightSpan> / <LightSpan>React Router</LightSpan> / <LightSpan>自定义 Hooks</LightSpan> / <LightSpan>webpack</LightSpan> / <LightSpan>TypeScript</LightSpan> / <LightSpan>LocalStorage</LightSpan> / <LightSpan>SVG Icon</LightSpan> / <LightSpan>styled-components</LightSpan></P2>
+            <P2>该项目加深了我对 React Hooks，React函数组件，TypeScript以及SVG Icon的了解，项目收获记录在语雀中。</P2>
+            <P2><A href="https://gouson.github.io/rainbow-bookkeeping/" target="_blank">预览地址</A> &nbsp;
+                <A href="https://github.com/Gouson/icebookkeeping-react" target="_blank">源码链接</A>
+            </P2>
+        </div>
+    }
+    const skill1 = {
+        projectName: 'ES6 / CSS3 / HTML5',
+        content: <div>
+            <P3><LightSpan>VUE</LightSpan> / VUEX / Vue Router / <LightSpan>React</LightSpan> / React Router / <LightSpan>TypeScript</LightSpan> </P3>
+            <P3>Node.js / Cypress自动化测试</P3>
+            <P3>AJAX / HTTP协议 / Lodash ...</P3>
+            <P3>JQuery / ElementUI / <LightSpan>Echarts</LightSpan> / Lodash / Express...</P3>
+            <P3><LightSpan>Webpack</LightSpan> / Gulp / Parcel</P3>
+            <P3>SQL / TypeORM</P3>
+        </div>
     }
     return (
         <Wrapper>
@@ -166,6 +183,12 @@ const Cv = () => {
                     </P>
                 </Section>
                 <Line />
+                <Section>
+                    <H2>主要使用技术栈</H2>
+                    <div>
+                        <Project {...skill1} />
+                    </div>
+                </Section>
                 <Section>
                     <H2>工作与项目经历</H2>
                     <div>

@@ -1,9 +1,9 @@
-import React, { JSXElementConstructor, useState } from "react"
+import React, { JSXElementConstructor, ReactElement, useState } from "react"
 import styled from "styled-components"
 
-interface ProjectType {
+type ProjectType = {
     projectName: string;
-    content: JSXElementConstructor;
+    content: ReactElement;
 }
 const Wrapper = styled.div`
    padding: 0 0 10px 20px;

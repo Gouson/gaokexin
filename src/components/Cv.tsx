@@ -176,7 +176,8 @@ const Cv = () => {
                     <P>
                         <Icon name="code" /> 前端工程师 | &nbsp;
                         <Icon name="telephone" /> 17611167607 | &nbsp;
-                        <Icon name="email" /> gouson@qq.com
+                        <Icon name="email" /> gouson@qq.com | &nbsp;
+                        <Icon name="wechat" /> shangbanyinghan
                     </P>
                     <P>
                         <Icon name="edu" /> 石家庄学院 软件工程 本科 2013-2017

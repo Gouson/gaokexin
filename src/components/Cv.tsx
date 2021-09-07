@@ -5,7 +5,6 @@ import Icon from "./Icon"
 import Project from "./Project"
 const Wrapper = styled.div`
     background: #eee;
-    padding: 20px 0;
     color: #121314;
 `
 const H1 = styled.h1`
@@ -79,7 +78,7 @@ const Cv = () => {
     const comp2 = {
         companyName: '北京嘉韵楷达气象科技有限公司',
         dateRange: '2019.5-至今',
-        companyContent: '负责公司气象业务产品的前端工作，主要包含气象数据服务平台，数据中台，以及国家气象局相关业务。',
+        companyContent: '负责公司气象业务产品的前端开发与优化工作，主要包含气象数据服务平台，数据中台，以及国家气象局相关业务。',
         projects: [
             {
                 projectName: '中国兴农网',

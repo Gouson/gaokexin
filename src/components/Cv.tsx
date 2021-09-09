@@ -192,8 +192,8 @@ const Cv = () => {
                 <Section>
                     <H2>工作与项目经历</H2>
                     <div>
-                        <Experience data={comp1} />
                         <Experience data={comp2} />
+                        <Experience data={comp1} />
                     </div>
                 </Section>
                 <Section>

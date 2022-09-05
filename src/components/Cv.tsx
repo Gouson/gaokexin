@@ -81,6 +81,17 @@ const Cv = () => {
         companyContent: '负责公司气象业务产品的前端开发与优化工作，主要包含气象数据服务平台，数据中台，以及国家气象局相关业务。',
         projects: [
             {
+                projectName: '农田管家',
+                content: <div>
+                    <P2>H5项目搭配后台管理系统，主要服务于个人农户，包括农业方面的咨询与服务，产量预测，收成记录，地块管理，气象预报等功能。</P2>
+                    <P2>使用<LightSpan>Vite+Vue3+TypeScript</LightSpan>搭建，<LightSpan>VueX+Token+Vue-Router</LightSpan>动态路由管理用户权限，
+                        UI构建采用<LightSpan>VantUI</LightSpan> ，使用<LightSpan>axios</LightSpan>提供接口服务。
+                        各种表单提交中，封装了涉及到农业站点与全国省市县级联选择，封装了表单验证函数。
+                        气象预报服务中，因业务需求，要有两条温度线同时出现，并出现在正确位置上，做了一些<LightSpan>Echarts</LightSpan>的配置，使其更好的满足业务需求。
+                    </P2>
+                </div>,
+            },
+            {
                 projectName: '中国兴农网',
                 content: <div>
                     <P2>本项目由中国气象局交由我司开发并维护，属于陈旧项目。因历史原因，需要在其此前定制的CMS系统中开发并维护，由于内部特殊的编译模板以及文件管理、路径配置的特殊性，很多框架或者打包工具不能在平台中使用，导致了代码耦合度高，难以管理维护。
@@ -90,7 +101,16 @@ const Cv = () => {
                         比如多个页面使用的地图模块（<LightSpan>Leaflet/天地图/Echarts</LightSpan>），专题业务中，一些常用的布局以及文字图片排版风格都做了特殊封装，使后续工作得以提高效率。
                     </P2>
                 </div>,
-            }, {
+            },
+            {
+                projectName: '赋农普惠网',
+                content: <div>
+                    <P2>气象局公服中心调整，此项目属于兴农网的部分业务剥离结合公司农业方向的新业务做了结合，增加移动端入口。</P2>
+                    <P2>使用Vue2CLI搭建，分为五大模块提供农场管理方向的信息，自适应样式，Nginx判断访问设备自动重定向到不同的入口。
+                    </P2>
+                </div>,
+            },
+            {
                 projectName: '嘉韵楷达气象数字中台',
                 content: <div>
                     <P2>本中台主要服务于公司内部业务，通过对气象数据的资源管理，对各产品的气象服务进行更细化的分类。把个数据指标按照不同的维度/参数/时间等标准进行分类组合。根据接口模板生成的数据产品以及业务产品可以满足各种不同项目的需求。</P2>
@@ -116,17 +136,6 @@ const Cv = () => {
                         风场的粒子效果使用了<LightSpan>Leaflet</LightSpan>中的velocity图层。
                         封装了地图上的<LightSpan>marker点聚合展开</LightSpan>业务逻辑，封装了海上台风<LightSpan>路线移动模块</LightSpan>，用路线坐标点参数来控制台风移动。
                         封装了根据风俗风向原始数据转换为不同角度的<LightSpan>箭头Icon组件</LightSpan>。
-                    </P2>
-                </div>,
-            },
-            {
-                projectName: '农田管家',
-                content: <div>
-                    <P2>H5项目搭配后台管理系统，主要服务于个人农户，包括农业方面的咨询与服务，产量预测，收成记录，地块管理，气象预报等功能。</P2>
-                    <P2>使用<LightSpan>Vite+Vue3+TypeScript</LightSpan>搭建，<LightSpan>VueX+Token+Vue-Router</LightSpan>动态路由管理用户权限，
-                        UI构建采用<LightSpan>VantUI</LightSpan> ，使用<LightSpan>axios</LightSpan>提供接口服务。
-                        各种表单提交中，封装了涉及到农业站点与全国省市县级联选择，封装了表单验证函数。
-                        气象预报服务中，因业务需求，要有两条温度线同时出现，并出现在正确位置上，做了一些<LightSpan>Echarts</LightSpan>的配置，使其更好的满足业务需求。
                     </P2>
                 </div>,
             }
@@ -159,11 +168,13 @@ const Cv = () => {
     const skill1 = {
         projectName: 'ES6 / CSS3 / HTML5',
         content: <div>
-            <P3><LightSpan>VUE</LightSpan> / VUEX / Vue Router / <LightSpan>React</LightSpan> / React Router / <LightSpan>TypeScript</LightSpan> </P3>
+            <P3><LightSpan>Vue 2/3</LightSpan> / VueX / Vue Router</P3>
+            <P3><LightSpan>React</LightSpan> / React Router / <LightSpan>TypeScript</LightSpan> </P3>
+            <P3><LightSpan>Webpack</LightSpan> / Gulp / Parcel</P3>
             <P3>Node.js / Cypress自动化测试</P3>
             <P3>AJAX / HTTP协议 / Lodash ...</P3>
             <P3>JQuery / ElementUI / <LightSpan>Echarts</LightSpan> / Lodash / Express...</P3>
-            <P3><LightSpan>Webpack</LightSpan> / Gulp / Parcel</P3>
+
             <P3>SQL / TypeORM</P3>
         </div>
     }
@@ -203,7 +214,6 @@ const Cv = () => {
                 </Section>
             </Article>
         </Wrapper>
-
     )
 }
 
